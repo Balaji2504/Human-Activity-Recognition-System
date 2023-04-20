@@ -132,8 +132,8 @@ if choice == 'login':
           st.image(img)
 
     elif bio == 'Analysis':
-      train_df = pd.read_csv("C:/Users/jamal/OneDrive/Desktop/Humam activity Recognition (HAR)/test.csv/test.csv")
-      data = pd.read_csv("C:/Users/jamal/OneDrive/Desktop/Humam activity Recognition (HAR)/test.csv/test.csv")
+      train_df = pd.read_csv("test.zip")
+      data = pd.read_csv("test.zip")
 
 
       def main():
