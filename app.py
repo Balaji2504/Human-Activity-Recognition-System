@@ -143,7 +143,7 @@ if choice == 'login':
         st.write('The pie chart represents the distribution of different activities in the dataset. Each section of the pie corresponds to a specific activity, and the size of the section represents the proportion of the dataset that corresponds to that activity.Let"s say we have N data points in our dataset, and there are n different activities in the dataset. Let"s also define a variable C_i to represent the number of data points that correspond to the i-th activity.')
         col1, col2, col3 = st.columns([1, 3, 1])
         with col2:
-          img = Image.open("C:/Users/jamal/OneDrive/Pictures/Screenshots/Screenshot 2023-04-11 161126.png")
+          img = Image.open("01.png")
           st.image(img)
         st.write('This is because the total angle of a circle is 360 degrees, and we want to represent each proportion as an angle in the circle.Therefore, the size of the i-th sector in the pie chart is proportional to C_i, and the angle of the sector is proportional to p_i.')
         fig = px.pie(train_df, names='Activity')
@@ -153,7 +153,7 @@ if choice == 'login':
         st.write('This chart is a bar chart that displays the angle between X-axis and gravity_mean with respect to different activities in a dataset. Each activity is represented by a different color, and the length of each bar indicates the proportion of data points associated with that activity that fall into a given range of angles.Mathematically, this chart represents the distribution of the feature "angle(X,gravityMean)" across different activities. The x-axis represents the values of the feature, and the y-axis represents the different activities. The formula for calculating the angle between two vectors is:')
         col1, col2, col3 = st.columns([1, 3, 1])
         with col2:
-          img = Image.open("C:/Users/jamal/OneDrive/Pictures/Screenshots/Screenshot 2023-04-11 163455.png")
+          img = Image.open("angle 02.png")
           st.image(img)
         st.write('where u and v are the two vectors, and ||u|| and ||v|| represent their magnitudes. In this chart, the angle is calculated between the X-axis and the gravity_mean vector, which is likely a vector representing the orientation of a device in three-dimensional space. By examining the distribution of this angle across different activities, we may gain insight into how the orientation of the device varies depending on the user"s activity."')
         fig = px.bar(data, x='angle(X,gravityMean)', y="Activity", color="Activity", width=1000, barmode='overlay')
@@ -168,12 +168,12 @@ if choice == 'login':
         st.write('The plot is created using a FacetGrid from the seaborn library, which allows us to create a subplot for each category of the hue variable ("Activity" in this case). Then, for each subplot, a distribution plot (distplot) is created for the values of the "tBodyAccMag-mean()" feature.The two annotations in the plot indicate the regions of the distribution that correspond to Stationary and Moving activities, respectively.Mathematically, the distribution plot can be represented by a probability density function (PDF) that shows the probability of a given value occurring in the distribution. In this case, we can write:')
         col1, col2, col3 = st.columns([1, 3, 1])
         with col2:
-          img = Image.open("C:/Users/jamal/OneDrive/Pictures/Screenshots/Screenshot 2023-04-11 162113.png")
+          img = Image.open("stationary 03.png")
           st.image(img)
         st.write('where f(x) is the PDF, and x is the value of the "tBodyAccMag-mean()" feature. The area under the PDF curve between two values a and b represents the probability of the feature taking a value between a and b, and is given by the integral:')
         col1, col2, col3 = st.columns([1, 3, 1])
         with col2:
-          img = Image.open("C:/Users/jamal/OneDrive/Pictures/Screenshots/Screenshot 2023-04-11 162539.png")
+          img = Image.open("04.png")
           st.image(img)
 
         st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -196,7 +196,7 @@ if choice == 'login':
         st.write('The chart is a countplot which shows the number of data points for each activity recorded by each volunteer in the dataset.In mathematical terms, we can say that the chart shows the distribution of data points for different activities across volunteers.')
         col1, col2, col3 = st.columns([1, 3, 1])
         with col2:
-          img = Image.open("C:/Users/jamal/OneDrive/Pictures/Screenshots/Screenshot 2023-04-11 162918.png")
+          img = Image.open("05.png")
           st.image(img)
         st.write('where $Count(activity_i, volunteer_j)$ is the count of data points for activity $i$ recorded by volunteer $j$, $I(activity_i, volunteer_j, data_k)$ is an indicator function which is equal to 1 if data point $k$ belongs to activity $i$ recorded by volunteer $j$, and $n$ is the total number of data points in the dataset.')
         st.write('The x-axis of the chart represents the volunteers, while the y-axis represents the count of data points. The different activities are represented by different colors in the chart.The sns.countplot() function is used to create the chart. It takes the x-axis and hue arguments to specify the grouping variables, and the data argument to specify the dataset. The plt.xlabel(), plt.ylabel(), and plt.title() functions are used to set the labels and title of the chart, and the sns.set_style() function is used to set the style of the chart.')
